@@ -11,15 +11,9 @@ import resumeRoutes from './routes/resumeRoutes.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-const PORT = process.env.PORT ||4000;
+const PORT = 4000;
 
-app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://resumexpert-sp.netlify.app/',
-  ],
-  credentials: true,
-}));
+app.use(cors());
 //app.use(express.json());
 //connect db
 connectDB();
